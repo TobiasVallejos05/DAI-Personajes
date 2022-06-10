@@ -1,4 +1,4 @@
-# DAI - TP02 - DAI - Personajes
+# DAI - TP02 - Personajes
 
 ## Documentación para correr el trabajo
 
