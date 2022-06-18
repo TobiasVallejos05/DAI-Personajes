@@ -32,6 +32,15 @@ router.put('/:id', Authenticate, async (req, res) => {
   return res.status(200).json(pelicula);
 });
 
+router.delete('/:id', Authenticate, async (req, res) => {
+  console.log(`Request URL Param: ${req.params.id}`);
+  console.log(`This is a delete operation`);
+
+  const pelicula = await peliculaService.deletePeliculaById(req.params.id);
+
+  return res.status(200).json(pelicula);
+});
+
 router.get('/:id', Authenticate, async (req, res) => {
   console.log(`Request URL Param: ${req.params.id}`);
   console.log(`This is a get operation`);
