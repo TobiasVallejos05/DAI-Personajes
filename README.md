@@ -1,6 +1,6 @@
 # DAI - TP02 - Personajes
 
-## Documentación para correr el trabajo
+### Documentación para correr el trabajo
 
 1. Clonar o descargar el ZIP del repositorio en Visual Studio Code.
 2. Descargar NodeJS.
