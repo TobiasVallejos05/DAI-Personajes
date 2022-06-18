@@ -42,4 +42,13 @@ router.put('/:id', Authenticate, async (req, res) => {
   return res.status(200).json(personaje);
 });
 
+router.delete('/:id', Authenticate, async (req, res) => {
+  console.log(`Request URL Param: ${req.params.id}`);
+  console.log(`This is a delete operation`);
+
+  const personaje = await personajeService.deletePersonajeById(req.params.id);
+
+  return res.status(200).json(personaje);
+});
+
 export default router;
