@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carogoldbaum/DAI---Personaje.git"
+    "url": "git+https://github.com/TobiasVallejos05/DAI-Personajes.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/carogoldbaum/DAI---Personaje/issues"
+    "url": "https://github.com/TobiasVallejos05/DAI-Personajes/issues"
   },
-  "homepage": "https://github.com/carogoldbaum/DAI---Personaje#readme",
+  "homepage": "https://github.com/TobiasVallejos05/DAI-Personajes#readme",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
