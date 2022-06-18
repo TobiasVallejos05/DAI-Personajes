@@ -37,7 +37,7 @@ router.put('/:id', Authenticate, async (req, res) => {
   console.log(`Request URL Param: ${req.params.id}`);
   console.log(`This is a put operation`);
 
-  const personaje = await personajeService.updatePersonajeById(req.body);
+  const personaje = await personajeService.updatePersonajeById(req.params.id, req.body);
 
   return res.status(200).json(personaje);
 });

@@ -13,7 +13,7 @@ export class PeliculaService {
         if(!titulo){
             const pool = await sql.connect(config);
             response = await pool.request()
-            .query(`SELECT Peliculas.IdPelicula, Peliculas.Imagen, Peliculas.Titulo, Peliculas.FechaCreacion from ${peliculaTabla}`);
+            .query(`SELECT Peliculas.IdPelicula, Peliculas.Imagen, Peliculas.Titulo, Peliculas.FechaCreacion from ${peliculaTabla} order by FechaCreacion ${orden??'asc'}`);
         }
         else{  
             const pool = await sql.connect(config);
