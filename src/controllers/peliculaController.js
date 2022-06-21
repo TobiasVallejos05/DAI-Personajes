@@ -17,19 +17,28 @@ router.get('', Authenticate, async (req, res) => {
 
 router.post('', Authenticate, async (req, res) => {
   console.log(`This is a post operation`);
+  let calificacion = req.body.calificacion;
+  if((calificacion>5)||(calificacion<1)){
+    return res.status(400).json("La calificacion debe estar entre 1 y 5")
+  }else{
+    const pelicula = await peliculaService.createPelicula(req.body);
 
-  const pelicula = await peliculaService.createPelicula(req.body);
-
-  return res.status(201).json(pelicula);
+    return res.status(201).json(pelicula);
+  }
 });
 
 router.put('/:id', Authenticate, async (req, res) => {
   console.log(`Request URL Param: ${req.params.id}`);
   console.log(`This is a put operation`);
 
-  const pelicula = await peliculaService.updatePeliculaById(req.body);
+  let calificacion = req.body.calificacion;
+  if((calificacion>5)||(calificacion<1)){
+    return res.status(400).json("La calificacion debe estar entre 1 y 5")
+  }else{
+    const pelicula = await peliculaService.updatePeliculaById(req.body);
 
-  return res.status(200).json(pelicula);
+    return res.status(200).json(pelicula);
+  }
 });
 
 router.delete('/:id', Authenticate, async (req, res) => {

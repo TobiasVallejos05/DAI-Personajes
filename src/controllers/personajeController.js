@@ -8,9 +8,7 @@ const personajeService = new PersonajeService();
 router.get('', Authenticate, async (req, res) => {
   console.log(`This is a get operation`);
   
-   const {nombre, edad, peso, idPelicula}= req.query;
-
-
+  const {nombre, edad, peso, idPelicula} = req.query;
   const personaje = await personajeService.getPersonaje(nombre, edad, peso, idPelicula);
 
   return res.status(200).json(personaje);
@@ -27,7 +25,6 @@ router.get('/:id', Authenticate, async (req, res) => {
 
 router.post('', Authenticate, async (req, res) => {
   console.log(`This is a post operation`);
-
   const personaje = await personajeService.createPersonaje(req.body);
 
   return res.status(201).json(personaje);
